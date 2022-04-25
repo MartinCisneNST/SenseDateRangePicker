@@ -109,7 +109,7 @@
                   '<div class="calendar dpleft">' +
                       '<div class="qlik-daterangepicker_input">' +
                         '<input class="input-mini" type="text" name="qlik-daterangepicker_start" value="" />' +
-                        '<i class="lui-icon lui-icon--calendar"></i>' +
+                        // '<i class="lui-icon lui-icon--calendar"></i>' +
                         '<div class="calendar-time">' +
                           '<div></div>' +
                           '<i class="fa fa-clock-o glyphicon glyphicon-time"></i>' +
@@ -120,7 +120,7 @@
                   '<div class="calendar dpright">' +
                       '<div class="qlik-daterangepicker_input">' +
                         '<input class="input-mini" type="text" name="qlik-daterangepicker_end" value="" />' +
-                        '<i class="lui-icon lui-icon--calendar"></i>' +
+                        // '<i class="lui-icon lui-icon--calendar"></i>' +
                         '<div class="calendar-time">' +
                           '<div></div>' +
                           '<i class="fa fa-clock-o glyphicon glyphicon-time"></i>' +
@@ -831,8 +831,14 @@
                       }
                       if (!disabled)
                           cname += 'available';
-  
-                      html += '<td class="' + cname.replace(/^\s+|\s+$/g, '') + '" data-title="' + 'r' + row + 'c' + col + '">' + calendar[row][col].date() + '</td>';
+
+                      var title = ''
+                      if(cname.replace(/^\s+|\s+$/g, '') == 'nodata available' || cname.replace(/^\s+|\s+$/g, '') == 'weekend nodata available' || cname.replace(/^\s+|\s+$/g, '') == 'weekend off nodata available' || cname.replace(/^\s+|\s+$/g, '') == 'off disabled available')
+                          title = 'no data available'
+                      else
+                          title = ''
+
+                      html += '<td class="' + cname.replace(/^\s+|\s+$/g, '') + '" data-title="' + 'r' + row + 'c' + col + '" title="' + title + '">' + calendar[row][col].date() + '</td>';
   
                   }
                   html += '</tr>';

@@ -114,7 +114,7 @@ define(["qlik", "jquery", "./moment.min", "./calendar-settings", "./encoder", "c
             var html = '<div>', startRange, endRange;
             if( !isEmpty (dateStates) ) {                
                 html += '<div class="bootstrap_inside pull-right show-range" >';
-                html += '   <i class="lui-icon lui-icon--calendar"></i>&nbsp;<span>';
+                html += '   <span>';
                 if (dateStates.rangeStart) {
                     startRange = createMoment(dateStates.rangeStart).format(DateFormat);
                     endRange = (dateStates.rangeEnd && (dateStates.rangeEnd !== dateStates.rangeStart)) ? createMoment(dateStates.rangeEnd).format(DateFormat) : null;
@@ -133,10 +133,10 @@ define(["qlik", "jquery", "./moment.min", "./calendar-settings", "./encoder", "c
                 } else {
                 html += encoder.encodeForHTML(props.defaultText);
                 }
-                html += '</span> <b class="lui-button__caret lui-caret"></b>';
+                html += '</span><i class="lui-icon lui-icon--calendar"></i>';
                 html += '</div>';               
             } else {
-                html += '   <i class="lui-icon lui-icon--calendar"></i>&nbsp;&nbsp;&nbsp;<span>';
+                html += '   <i class="lui-icon lui-icon--calendar"></i><span>';
                 html += 'Add Date Field' + '</span>';
             }
             html += '</div>';

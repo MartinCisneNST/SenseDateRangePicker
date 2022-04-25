@@ -21,13 +21,16 @@ changed left and right rule names to prevent clash with sense client css */
 
 .qv-object-qlik-date-picker {
   .show-range {
-    color: #ffffff;
-    background: #0099CC;
+    color: #000000;
+    background: #ffffff;
     cursor: pointer; 
     padding: 5px 10px 5px 10px;  
-    margin-right: 10px; 
+    margin: 0px 10px 0px 10px; 
+    border: 1px solid #adadad;
     border-radius: 4px;
-    display: inline;
+    display: flex;
+    justify-content: space-between;
+    width: -webkit-fill-available;
   }
 
   .lui-icon--expand, .lui-icon--camera {
@@ -143,6 +146,7 @@ changed left and right rule names to prevent clash with sense client css */
     font-weight: 600;
     margin-left: 100px;
     margin-top: 4px;
+    color: #ff0000;
   }
 
   .calendar {
@@ -231,7 +235,7 @@ changed left and right rule names to prevent clash with sense client css */
     cursor: default;
   }
   td.nodata {
-    color: #999;
+    color: #ff0000;
   }
   td.available:hover{
     background-color: rgba(0,0,0,.05); 
@@ -244,7 +248,8 @@ changed left and right rule names to prevent clash with sense client css */
     background-color: #045073;
   }
   &.in-selection td.stateS, td.stateA {
-    background-color: #dedede;
+    background-color: #ffffff;
+    color: #333333;
   }
   td.stateX {
     background-color: #a8a8a8;

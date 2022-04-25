@@ -373,7 +373,7 @@ define(["qlik"], function (qlik) {
                         type: "string",
                         ref: "props.format",
                         label: "Format",
-                        defaultValue: "YYYY-MM-DD",
+                        defaultValue: "MM/DD/YYYY",
                         expression: "optional"
                     },
                     Separator: {
@@ -494,7 +494,7 @@ define(["qlik"], function (qlik) {
                         type: "string",
                         ref: "props.format",
                         label: "Format",
-                        defaultValue: "YYYY-MM-DD",
+                        defaultValue: "MM/DD/YYYY",
                         expression: "optional"
                     },
                     Separator: {
